@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificates - Rishikumar V</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right,#f4f4f5, #9171dc);
+      scroll-behavior: smooth;
+    }
+
+    nav.navbar {
+      background: linear-gradient(to right, #000000, #4ca1af);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav.navbar h1 {
+      color: #fff;
+      font-size: 24px;
+      background: linear-gradient(90deg, #af2c53, #fefefe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav.navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav.navbar a:hover {
+      color: #f9d423;
+    }
+
+    .certificates-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .search-bar {
+      margin: 20px auto;
+      max-width: 300px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .cert-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .cert-card {
+      position: relative;
+      width: 300px;
+      height: 220px;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .cert-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .cert-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+      padding: 20px;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .caption {
+      color: #fff;
+      margin-top: 15px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+      padding: 20px;
+    }
+
+    .nav-left {
+      left: 20px;
+    }
+
+    .nav-right {
+      right: 20px;
+    }
+
+    .close-lightbox {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .cert-card {
+        width: 90%;
+        height: auto;
+      }
+
+      .cert-card img {
+        height: auto;
+      }
+
+      .lightbox img {
+        max-width: 95vw;
+        max-height: 70vh;
+      }
+
+      .caption {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ✅ Header added -->
+  <nav class="navbar">
+    <h1>RISHIKUMAR V</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="certificates-section" data-aos="zoom-in">
+    <h2>My Certificates</h2>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search certificates..." />
+    </div>
+
+    <div class="cert-grid" id="certGrid">
+      <!-- Certificate Cards -->
+      <div class="cert-card" data-caption="Oracle APEX cloud developer">
+        <img src="images/apex.png" alt="Certificate 1" />
+      </div>
+      <div class="cert-card" data-caption="AWS cloud practitioner">
+        <img src="images/aws.png" alt="Certificate 2" />
+      </div>
+      <div class="cert-card" data-caption="Basics of Computer Networks">
+        <img src="images/cn.png" alt="Certificate 3" />
+      </div>
+      <div class="cert-card" data-caption="Data Visualization">
+        <img src="images/data.png" alt="Certificate 4" />
+      </div>
+      <div class="cert-card" data-caption="Google Analytics for Beginners">
+        <img src="images/googleanalytics.png" alt="Certificate 5" />
+      </div>
+      <div class="cert-card" data-caption="HackerRank - Python">
+        <img src="images/hrpython.png" alt="Certificate 6" />
+      </div>
+      <div class="cert-card" data-caption="HackerRank - SQL">
+        <img src="images/hrsql.png" alt="Certificate 7" />
+      </div>
+      <div class="cert-card" data-caption="Oracle Cloud Infrastructure (OCI)">
+        <img src="images/oci.png" alt="Certificate 8" />
+      </div>
+      <div class="cert-card" data-caption="Power BI">
+        <img src="images/powerbi.png" alt="Certificate 9" />
+      </div>
+      <div class="cert-card" data-caption="Python Bootcamp">
+        <img src="images/pythonbootcamp.png" alt="Certificate 10" />
+      </div>
+      <div class="cert-card" data-caption="Tableau Workshop">
+        <img src="images/tableau.png" alt="Certificate 11" />
+      </div>
+      <div class="cert-card" data-caption="Oracle AI Vector">
+        <img src="images/vector.png" alt="Certificate 12" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+    <span class="lightbox-nav nav-left" onclick="prevImage()">&#10094;</span>
+    <img id="lightboxImg" src="" alt="" />
+    <span class="lightbox-nav nav-right" onclick="nextImage()">&#10095;</span>
+    <div class="caption" id="lightboxCaption"></div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const certCards = document.querySelectorAll(".cert-card");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+    const lightboxCaption = document.getElementById("lightboxCaption");
+    let currentIndex = 0;
+
+    const images = Array.from(certCards).map(card => ({
+      src: card.querySelector("img").src,
+      caption: card.getAttribute("data-caption")
+    }));
+
+    certCards.forEach((card, index) => {
+      card.addEventListener("click", () => {
+        currentIndex = index;
+        showLightbox(images[index]);
+      });
+    });
+
+    function showLightbox(data) {
+      lightboxImg.src = data.src;
+      lightboxCaption.textContent = data.caption;
+      lightbox.style.display = "flex";
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = "none";
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showLightbox(images[currentIndex]);
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showLightbox(images[currentIndex]);
+    }
+
+    // Filter functionality
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("input", () => {
+      const value = searchInput.value.toLowerCase();
+      certCards.forEach(card => {
+        const caption = card.getAttribute("data-caption").toLowerCase();
+        card.style.display = caption.includes(value) ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Rishikumar V</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f4f4f5, #9171dc);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    nav.navbar {
+      background: linear-gradient(to right, #000000, #4ca1af);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav.navbar h1 {
+      font-size: 24px;
+      background: linear-gradient(90deg, #af2c53, #fefefe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav.navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav.navbar a:hover {
+      color: #f9d423;
+    }
+    .about-container {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-container h2 {
+      font-size: 32px;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .about-container p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #555;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    .photo-box {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s;
+      animation: floatImage 3s ease-in-out infinite;
+    }
+
+    .photo-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .timeline-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .timeline-card h3 {
+      color: #2c3e50;
+    }
+
+    @media (min-width: 768px) {
+      .timeline {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @keyframes floatImage {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <h1>RISHIKUMAR V</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="about-container" data-aos="fade-up">
+    <div class="photo-box">
+      <img src="images/Rishi.jpg" alt="Rishikumar V" />
+    </div>
+    <h2><span id="typed-text"></span></h2>
+    <p>I am a passionate Python Full Stack Developer with an interest in building creative web experiences.</p>
+
+    <div class="timeline">
+      <div class="timeline-card" data-aos="fade-up">
+        <h3>🎓 Education</h3>
+        <p>Bachelor's in Information Technology - Saveetha School Of Engineering, Chennai, Tamil Nadu</p>
+        <p>SSLC & HSC - Sundar Matric Hr. Sec. School, Chennai, Tamil Nadu</p>
+      </div>
+      <div class="timeline-card" data-aos="fade-up">
+        <h3>💼 Internship</h3>
+        <p>Python Internship At QSpiders, Chennai</p>
+      </div>
+      <div class="timeline-card" data-aos="fade-up">
+        <h3>🏆 Achievements</h3>
+        <p>II place in District High Jump, Tamil Nadu</p>
+        <p>Silver level Silambam Martial Arts</p>
+      </div>
+      <div class="timeline-card" data-aos="fade-up">
+        <h3>🎮 Hobbies</h3>
+        <p>Editography, Photography, Videography</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const typed = new Typed("#typed-text", {
+      strings: ["Hello, I'm Rishikumar V", "Python Full Stack Developer", "Creative Web Designer","Junior Data Analyst"],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true,
+    });
+  </script>
+</body>
+</html>

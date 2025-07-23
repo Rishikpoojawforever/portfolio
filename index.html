@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RISHIKUMAR V - Full Stack Developer Portfolio" />
+  <title>RISHIKUMAR V - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f4f4f5, #9171dc);
+      color: #333;
+    }
+    nav.navbar {
+      background: linear-gradient(to right, #000000, #4ca1af);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav.navbar h1 {
+      color: #fff;
+      font-size: 24px;
+      background: linear-gradient(90deg, #af2c53, #fefefe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    nav.navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+    }
+    nav.navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    nav.navbar ul li a:hover::after,
+    nav.navbar ul li a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      background: #ffeb3b;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+      flex-wrap: wrap;
+      min-height: 100vh;
+    }
+
+    .hero-text {
+      flex: 1 1 50%;
+      max-width: 500px;
+      padding-right: 30px;
+    }
+
+    .hero-text h2 {
+      font-size: 36px;
+      background: linear-gradient(90deg, #60971d, #0a1f11);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInUp 2s ease forwards;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      color: #666;
+      margin-top: 10px;
+      animation: fadeInUp 1.5s ease forwards;
+    }
+
+    .hero-text .btn {
+      margin-top: 20px;
+      display: inline-block;
+      background: #4ca1af;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .hero-text .btn:hover {
+      background: #2c3e50;
+    }
+
+    .hero-img {
+  flex: 1 1 40%;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end; /* Align image to the right */
+}
+
+.hero-img img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(32, 30, 30, 0.473);
+  margin-left: 30px; /* Moves the photo slightly to the right */
+  animation: slideBounce 1.5s ease forwards;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-img img:hover {
+  transform: scale(1.08) rotateZ(1deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 0 15px rgba(19, 192, 218, 0.824);
+}
+
+
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInRight {
+      0% { opacity: 0; transform: translateX(20px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+    
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2c3e50;
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 20px;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #f9d423;
+    }
+
+    @media screen and (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text, .hero-img {
+        flex: 1 1 100%;
+        padding: 0;
+      }
+      .hero-text h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <h1>RISHIKUMAR V</h1>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" data-aos="fade-up">
+    <div class="hero-text">
+  <h2>Hi, I'm <strong>RISHIKUMAR V</strong></h2>
+  <p>Full Stack Developer | Photographer | Editor</p>
+  <a href="Rishikumar_Resume.pdf" download class="btn"><i class="fas fa-download"></i> Download Resume</a>
+  <a href="contact.html" class="btn" style="margin-left: 10px;"><i class="fas fa-paper-plane"></i> Hire Me</a>
+   </div>
+    <div class="hero-img">
+      <img src="images/Rishik.JPG" alt="Rishikumar V Photo" />
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="mailto:rishikumarvijay7@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.instagram.com/rixhikehh.__?igsh=b2F0OWdybmlhbGZ0&utm_source=qr" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/rishikumar-v-202619315" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/RISHIKVIJAY" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+    <p>&copy; 2025 RISHIKUMAR V. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  
+</body>
+</html>
